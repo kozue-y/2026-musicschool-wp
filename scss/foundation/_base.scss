@@ -1,0 +1,52 @@
+@use "./variable" as *;
+html {
+    font-size: 10px;
+    @media (max-width: 940px) and (min-width: 768px) {
+      font-size: calc( 10 / 940 * 100vw);
+      }
+    @media (max-width: 767px) {
+      font-size: calc( 10 / 375 * 100vw);  
+    }  
+}
+
+body {
+    font-family: $font-base;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    letter-spacing: normal;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+main {
+  margin-top: 8rem;
+  @media (max-width: 767px) {
+    margin-top: 5rem;  
+  }
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+a, button {
+  transition: opacity 0.4s ease;
+}
+
+.u-pc-only {
+    display: block;
+  }
+  
+  .u-sp-only {
+    display: none;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .u-pc-only {
+      display: none;
+    }
+    .u-sp-only {
+      display: block;
+    }
+  }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>きたむらミュージックスクール</title>
+  <link rel="icon" href="images/sitetitle_icon.svg" type="image/svg">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="ミュージックスクールご紹介サイトです">
+  <meta name="keywords" content="ミュージックスクール, レッスン">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- header -->
+    <header class="l-header" id="header">
+        <div class="l-header-inner">
+          <div class="c-site-title">
+            <p>
+              <a href="index.html">
+                <span class="c-site-title__icon">
+                  <img src="images/sitetitle_icon.svg" alt="きたむらミュージックスクール">
+                </span>  
+                <span class="c-site-title__text">きたむら<br class="u-pc-only"><span
+                    class="c-site-title__text--sub">ミュージックスクール</span></span>
+              </a>
+            </p>
+          </div>
+          <!-- PC用ナビ -->
+          <div class="c-global-nav u-pc-only">
+            <nav aria-label="ヘッダーナビゲーション">
+              <ul class="c-global-nav__list">
+                <li><a href="plan.html">料金</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+                <li><a href="result_list.html">卒業実績</a></li>
+              </ul>
+              <div class="c-global-nav__contact-wrap">
+                <a href="contact_form.html" class="c-header-btn c-global-nav__contact">お問い合わせ</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- ハンバーガーボタンSP用 -->
+        <button id="hamburger-block" class="c-hamburger u-sp-only">
+          <span class="c-hamburger__inner">
+            <span class="c-hamburger__line"></span>
+            <span class="c-hamburger__line"></span>
+            <span class="c-hamburger__line"></span>
+          </span>
+        </button>
+
+        <!-- ハンバーガーナビゲーションSP用 -->
+        <div class="c-drawer-menu u-sp-only" id="js-drawer">
+          <nav aria-label="ヘッダーナビゲーション">
+            <ul class="c-drawer-menu__list">
+              <li><a href="plan.html">料金</a></li>
+              <li><a href="blog.html">ブログ</a></li>
+              <li><a href="result_list.html">卒業実績</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+    <!-- メイン -->
+    <main class="main">
+      <nav class="c-breadcrumb" aria-label="breadcrumb">
+        <div class="l-inner">
+          <ol class="c-breadcrumb__list">
+            <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
+            <li class="c-breadcrumb__item"><a href="result_list.html">卒業実績</a></li>
+            <li class="c-breadcrumb__item"><span>ポップス</span></li>
+            <li class="c-breadcrumb__item c-breadcrumb__item--title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</li>
+          </ol>
+        </div>
+      </nav>
+
+      <section class="p-result-detail">
+        <div class="l-inner">
+            <div class="p-result-detail__header">
+              <h1 class="p-result-detail__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
+              <time class="p-result-detail__date" datetime="2026-01-15">0000.00.00</time>
+              <div class="p-result-detail__img-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="images/result_detail01.jpg">
+                  <img src="images/result_details_sp.jpg" alt="卒業実績紹介画像">
+                </picture>
+                <span class="p-result-detail__category">ポップス</span>
+              </div>
+            </div>
+
+            <div class="p-result-detail__profile">
+              <table class="p-result-detail__table">
+                <tbody>
+                  <tr>
+                    <th scope="row">名前</th>
+                    <td>丸山</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">職業</th>
+                    <td>証券会社勤務</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ジャンル</th>
+                    <td>入力欄</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">実績</th>
+                    <td>入力欄</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">SNS</th>
+                    <td>入力欄</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="p-result-detail__text">
+                <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+              </div>
+            </div>
+            <nav class="p-result-detail__post-nav" aria-label="前後の記事">
+              <ul class="p-result-detail__post-nav-list">
+                <li class="p-result-detail__post-nav-item">
+                  <a href="#" class="p-result-detail__post-nav-link">
+                    <span class="p-result-detail__post-nav-label p-result-detail__post-nav-label--prev">
+                      ◀︎ 前の記事
+                    </span>
+                    <div class="p-result-detail__post-nav-body">
+                      <div class="p-result-detail__post-nav-thumb u-pc-only">
+                        <img src="images/blog03.jpg" alt="記事画像">
+                      </div>
+                      <p class="p-result-detail__post-nav-title">
+                        タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-result-detail__post-nav-item">
+                  <a href="#" class="p-result-detail__post-nav-link">
+                    <span class="p-result-detail__post-nav-label p-blog-detail__post-nav-label--next">
+                      次の記事 ▶︎
+                    </span>
+                    <div class="p-result-detail__post-nav-body">
+                      <div class="p-result-detail__post-nav-thumb u-pc-only">
+                        <img src="images/blog03.jpg" alt="記事画像">
+                      </div>
+                      <p class="p-result-detail__post-nav-title">
+                        タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- 関連記事 -->
+            <div class="p-result-detail__related">
+                  <h2 class="p-result-detail__related-title">関連記事</h2>
+                  <ul class="p-result-detail__related-list">
+                    <li class="p-result-detail__related-item">
+                      <a href="#" class="p-result-detail__related-link">
+                        <div class="p-result-detail__related-thumb">
+                          <img src="images/voice02.jpg" alt="記事画像">
+                          <span class="p-result-detail__related-category">ロック</span>
+                        </div>
+                        <div class="p-result-detail__related-body">
+                          <p class="p-result-detail__related-subtitle">
+                            タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                          </p>
+                          <time class="p-result-detail__related-date" datetime="2026-01-15">0000.00.00</time>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="p-result-detail__related-item">
+                      <a href="#" class="p-result-detail__related-link">
+                        <div class="p-result-detail__related-thumb">
+                          <img src="images/voice03.jpg" alt="記事画像">
+                          <span class="p-result-detail__related-category">ジャズ</span>
+                        </div>
+                        <div class="p-result-detail__related-body">
+                          <p class="p-result-detail__related-subtitle">
+                            タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                          </p>
+                          <time class="p-result-detail__related-date" datetime="2026-01-15">0000.00.00</time>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="p-result-detail__related-item">
+                      <a href="#" class="p-result-detail__related-link">
+                        <div class="p-result-detail__related-thumb">
+                          <img src="images/result-details03.jpg" alt="記事画像">
+                          <span class="p-result-detail__related-category">ラテン</span>
+                        </div>
+                        <div class="p-result-detail__related-body">
+                          <p class="p-result-detail__related-subtitle">
+                            タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                          </p>
+                          <time class="p-result-detail__related-date" datetime="2026-01-15">0000.00.00</time>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+      
+            </div>
+        </div>
+      </section>
+
+
+
+
+    </main>
+
+    <!-- footer -->
+    <footer id="footer" class="c-footer">
+      <div class="l-inner">
+        <nav aria-label="フッターナビゲーション">
+          <ul class="c-footer__nav">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="plan.html">料金</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+            <li><a href="result_list.html">卒業実績</a></li>
+          </ul>
+        </nav>
+        <a href="index.html" class="c-footer__logo">
+          <img src="images/logo_white.svg" alt="サイトロゴ">
+        </a>
+        <div class="c-footer__copyright">
+          <small>Copyright &copy; 0000 KITAMURA music school Inc. All Rights</small>
+        </div>
+        <ul class="c-footer__sns">
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icon_twitter.svg" alt="twitterへのリンク（別タブで開きます）"></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icon_facebook.svg" alt="facebookへのリンク（別タブで開きます）"></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icon_youtube.svg" alt="youtubeへのリンク（別タブで開きます）"></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icon_instagram.svg" alt="instagramへのリンク（別タブで開きます）"></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- TOPへ戻るボタン -->
+  <a href="#" class="c-page-top__link" id="js-page-top">
+    <div class="c-page-top">
+      <img src="images/top-arrows.svg" alt="TOPへ戻る矢印">
+    </div>
+  </a>
+
+  <!-- お問合せボタン -->
+  <a href="contact_form.html" class="c-contact-btn__link" id="js-contact-btn">
+    <span class="c-contact-btn__text">お問い合わせ</span>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

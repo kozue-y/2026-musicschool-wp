@@ -1,0 +1,153 @@
+@use"../../foundation/variable" as*;
+
+.c-header-btn {
+    background: $main-color;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+        font-size: 1.5rem;
+        line-height: calc(33 / 15);
+        width: 15rem;
+        height: 4.5rem;
+
+        border: solid 1px $main-color;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      
+        &:hover {
+            background-color: $color-white;
+            color: $main-color;
+        }
+}
+
+// TOPへ戻るボタン
+:root {
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --contact-h: 6rem;
+    --gap: 1.9rem;
+  }
+
+.c-page-top__link {
+    position: fixed;
+    bottom: 9.1rem;
+    right: 11.6rem;
+    width: 6.8rem;
+    height: 6.8rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.15s ease-out;
+    will-change: transform;
+    background-color: rgba(0,0,0,0.502);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.is-show {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+    // お問合せボタンがないページでは位置を下げる
+    .no-contact-btn & {
+        bottom: calc(3.1rem + var(--safe-bottom));
+    }
+}
+.c-page-top {
+    width: 3.3rem;
+    height: 2.2rem;
+}
+@media (max-width: 767px) {
+    .c-page-top__link {
+        right: 2rem;
+        bottom: calc(var(--contact-h) + var(--gap) + var(--safe-bottom));
+
+        .no-contact-btn & {
+            bottom: calc(1.8rem + var(--safe-bottom));
+        }
+    }
+    
+}
+
+// お問合せボタン
+.c-contact-btn__link {
+    position: fixed;
+    right: 0;
+    bottom: var(--safe-bottom);
+    z-index: 999;
+    background-color: $main-color;
+    width: 30rem;
+    height: 6rem;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid $main-color;
+    transition: opacity 0.4s ease,
+      visibility 0.4s ease,
+      background-color 0.4s ease,
+      color 0.4s ease,
+      transform 0.15s ease-out;
+    will-change: transform;  
+   
+
+    &.is-show {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover {
+        background-color: $color-white;
+        color: $main-color;
+    }
+}
+.c-contact-btn__text {
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+@media (max-width: 767px) {
+    .c-contact-btn__link {
+        width: 33.5rem;
+        right: 0;
+        left: 0;
+        margin-inline: auto;
+    }   
+}
+
+
+
+// 送信・ホームへ戻るボタン
+.c-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: $main-color;
+    color: $color-white;
+    border: solid 1px $main-color;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-white;
+        color: $main-color;
+    }
+}
+.c-btn--block {
+    height: 5rem;
+    width: 25rem;
+}
+@media (max-width: 767px) {
+    .c-btn--block {
+        width: 100%;
+    }    
+}
