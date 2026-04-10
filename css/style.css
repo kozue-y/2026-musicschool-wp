@@ -1433,6 +1433,10 @@ a, button {
   margin-inline: auto;
 }
 
+.p-voices__swiper .swiper-wrapper {
+  height: auto;
+}
+
 .p-voices__card {
   display: block;
   width: 100%;
