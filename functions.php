@@ -1,7 +1,7 @@
+<?php
 // --------------------------------------------------
 // 最初の設定
 // --------------------------------------------------
-<?php
 function custom_theme_setup() {
     add_theme_support('title-tag');
     add_theme_support('automatic-feed-links');
