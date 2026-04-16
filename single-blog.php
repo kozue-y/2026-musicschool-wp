@@ -122,60 +122,10 @@
                         <!-- ページネーション -->
                         <?php get_template_part('template-parts/single-pagination'); ?>
 
+                        <!-- 関連記事 -->
+                        <?php get_template_part('template-parts/related-articles'); ?>
 
-                        <section class="p-blog-detail__related">
-                            <h2 class="p-blog-detail__related-title">関連記事</h2>
-                            <ul class="p-blog-detail__related-list">
-                                <li class="p-blog-detail__related-item">
-                                    <a href="#" class="p-blog-detail__related-link">
-                                        <div class="p-blog-detail__related-thumb">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details03.jpg"
-                                                alt="記事画像">
-                                            <span class="p-blog-detail__related-category">ギター</span>
-                                        </div>
-                                        <div class="p-blog-detail__related-body">
-                                            <p class="p-blog-detail__related-subtitle">
-                                                タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                            </p>
-                                            <time class="p-blog-detail__related-date"
-                                                datetime="2026-01-15">0000.00.00</time>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="p-blog-detail__related-item">
-                                    <a href="#" class="p-blog-detail__related-link">
-                                        <div class="p-blog-detail__related-thumb">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details03.jpg"
-                                                alt="記事画像">
-                                            <span class="p-blog-detail__related-category">ギター</span>
-                                        </div>
-                                        <div class="p-blog-detail__related-body">
-                                            <p class="p-blog-detail__related-subtitle">
-                                                タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                            </p>
-                                            <time class="p-blog-detail__related-date"
-                                                datetime="2026-01-15">0000.00.00</time>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="p-blog-detail__related-item">
-                                    <a href="#" class="p-blog-detail__related-link">
-                                        <div class="p-blog-detail__related-thumb">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details03.jpg"
-                                                alt="記事画像">
-                                            <span class="p-blog-detail__related-category">ギター</span>
-                                        </div>
-                                        <div class="p-blog-detail__related-body">
-                                            <p class="p-blog-detail__related-subtitle">
-                                                タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                            </p>
-                                            <time class="p-blog-detail__related-date"
-                                                datetime="2026-01-15">0000.00.00</time>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
+
                     </article>
                 </div>
 

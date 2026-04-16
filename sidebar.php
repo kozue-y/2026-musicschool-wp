@@ -28,64 +28,63 @@
         <div class="p-widget p-widget--recommend">
             <p class="p-widget__title">おすすめの記事</p>
             <ul class="p-widget__list">
+                <?php
+                $args = array(
+                    'posts_per_page' => 3,
+                    'post_type' => 'blog',
+                    'taxonomy' => 'blog_recommend',
+                    'term' => 'recommend',
+                    'orderby' => 'date',
+                    'order' => 'DESC'
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()):
+                    while ($the_query->have_posts()): $the_query->the_post();
+                ?>
                 <li class="p-widget__item">
-                    <a href="#" class="p-widget__link">
+                    <a href="<?php the_permalink(); ?>" class="p-widget__link">
                         <span class="p-widget__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-featured-image.jpg"
-                                alt="記事画像">
+                            <?php if ( has_post_thumbnail() ) : ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                            <?php else : ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
+                            <?php endif; ?>
                         </span>
-                        <span class="p-widget__subtitle">タイトルが入ります。タイトル</span>
+                        <span
+                            class="p-widget__subtitle"><?php echo esc_html(wp_trim_words(get_the_title(), 15, '...')); ?></span>
                     </a>
                 </li>
-                <li class="p-widget__item">
-                    <a href="#" class="p-widget__link">
-                        <span class="p-widget__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-featured-image.jpg"
-                                alt="記事画像">
-                        </span>
-                        <span class="p-widget__subtitle">タイトルが入ります。タイトル</span>
-                    </a>
-                </li>
-                <li class="p-widget__item">
-                    <a href="#" class="p-widget__link">
-                        <span class="p-widget__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-featured-image.jpg"
-                                alt="記事画像">
-                        </span>
-                        <span class="p-widget__subtitle">タイトルが入ります。タイトル</span>
-                    </a>
-                </li>
+                <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
             </ul>
         </div>
 
         <div class="p-widget p-widget--category">
             <p class="p-widget__title">カテゴリー</p>
             <ul class="p-widget__category-list">
+                <?php
+                $terms = get_terms([
+                    'taxonomy' => 'blog_cate',
+                    'hide_empty' => true,
+                ]);
+                if (!is_wp_error($terms) && !empty($terms)) :
+                    foreach ($terms as $term):
+                        $term_link = get_term_link($term->term_id);
+                        ?>
                 <li class="p-widget__category-item">
-                    <a href="#" class="p-widget__category-link">
-                        <span class="p-widget__category-label">カテゴリー</span>
+                    <a href="<?php echo esc_url($term_link); ?>" class="p-widget__category-link">
+                        <span class="p-widget__category-label">
+                            <?php echo esc_html($term->name); ?>
+                        </span>
                     </a>
                 </li>
-                <li class="p-widget__category-item">
-                    <a href="#" class="p-widget__category-link">
-                        <span class="p-widget__category-label">カテゴリー</span>
-                    </a>
-                </li>
-                <li class="p-widget__category-item">
-                    <a href="#" class="p-widget__category-link">
-                        <span class="p-widget__category-label">カテゴリー</span>
-                    </a>
-                </li>
-                <li class="p-widget__category-item">
-                    <a href="#" class="p-widget__category-link">
-                        <span class="p-widget__category-label">カテゴリー</span>
-                    </a>
-                </li>
-                <li class="p-widget__category-item">
-                    <a href="#" class="p-widget__category-link">
-                        <span class="p-widget__category-label">カテゴリー</span>
-                    </a>
-                </li>
+                <?php
+                endforeach;
+            endif;
+            ?>
             </ul>
         </div>
     </div>
