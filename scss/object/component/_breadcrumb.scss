@@ -1,38 +1,38 @@
 @use"../../foundation/variable" as*;
 .c-breadcrumb {
     background-color: #e8e8e8;
-}
-.c-breadcrumb__list {
-    display: flex;
-    column-gap: 2rem;
-}
-.c-breadcrumb__item {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    font-size: 1.6rem;
-    line-height: calc(33 / 16);
+    
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            column-gap: 1.9rem;
 
-
-    &:not(:last-child)::after {
-        content: ">";
-        margin-left: 1.8rem;
-        font-size: 1.6rem;
-        line-height: calc(33 / 16);
-    }
+            
+        }
     a,
     span {
         display: block;
-        align-items: center;
-        padding-top: 1rem;
-        padding-bottom: 0.7rem;
+        font-size: 1.6rem;
+        line-height: calc(33 / 16);    
     }
     a {
         
         position: relative;
         color: inherit;
         transition: opacity 0.4s ease;
+        padding-top: 1rem;
+        padding-bottom: 0.7rem;
 
+        @media (max-width: 767px) {
+            padding-top: 0;
+            padding-bottom: 0;
+            
+        }
+
+    
         &::after {
             content: "";
             position: absolute;
@@ -44,8 +44,12 @@
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s ease;
-        }
 
+            @media (max-width: 767px) {
+                bottom: 0;    
+            }
+        }
+    
         &:hover {
             opacity: 0.7;
         }
@@ -54,34 +58,11 @@
         }
     }
     }
-
-.c-breadcrumb__item--title {
-    white-space: normal;
 }
 
-@media (max-width: 767px) {
-    .c-breadcrumb__list {
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-        column-gap: 1.9rem;
-    }
-    .c-breadcrumb__item {
-        a,
-        span {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-        &:not(:last-child)::after {
-            margin-left: 2.2rem;
-            
-        }
-        a::after {
-            bottom: 0;
-        }
-    }
-    .c-breadcrumb__item--title {
-        line-height: calc(20 /16);
-        align-items: flex-start;
-    }
-}
+// @media (max-width: 767px) {
+//     .c-breadcrumb__item--title {
+//         line-height: calc(20 /16);
+//         align-items: flex-start;
+//     }
+// }

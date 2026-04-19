@@ -14,14 +14,7 @@
     </section>
 
     <!-- breadcrumb -->
-    <nav class="c-breadcrumb" aria-label="breadcrumb">
-        <div class="l-inner">
-            <ol class="c-breadcrumb__list">
-                <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                <li class="c-breadcrumb__item"><span>プラン・料金</span></li>
-            </ol>
-        </div>
-    </nav>
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
 
     <!-- system -->
     <section class="p-plan-system" id="system">

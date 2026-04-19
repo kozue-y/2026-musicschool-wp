@@ -8,32 +8,51 @@
     justify-content: center;
     align-items: center;
     column-gap: 1rem;
-  }
-  .current,
-  a {
-    width: 5rem;
-    height: 5rem;
-    font-size: 1.8rem;
-    line-height: calc(30 / 18);
-    font-weight: bold;
-    border: solid 1px $color-black;
-    display: grid;
-    place-content: center;
-    transition: background-color 0.4s ease, color 0.4s ease;
 
-    &:hover {
-        background-color: $color-black;
-        color: $color-white;
-       }
-       .extend {
-        display: inline-block;
-        padding-inline: 1rem;
-        padding-bottom: 1rem;
+    @media (max-width: 767px) {
+    column-gap: 0.5rem;
+    }
+    .current,
+    a {
+        width: 5rem;
+        height: 5rem;
         font-size: 1.8rem;
+        line-height: calc(30 / 18);
+        font-weight: bold;
+        border: solid 1px $color-black;
+        display: grid;
+        place-content: center;
+        transition: background-color 0.4s ease, color 0.4s ease;
+
+        @media (max-width: 767px) {
+            width: 4.4rem;
+            height: 4.4rem;
+            font-size: 1.6rem;
+            line-height: calc(28 / 16);
+        }
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+    
+    .extend {
+        display: grid;
+        place-content: center;
+        padding: 0 1rem;
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
         font-weight: bold;
         border: none; 
-       }  
-   }
+
+        @media (max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: calc(28 / 16);
+            padding: 0 0.7rem;
+            
+        }
+    }  
+  }
 }
 
 // .c-pagination__list {

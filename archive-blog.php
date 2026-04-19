@@ -11,17 +11,10 @@
             <h1 class="c-page-mv__title">ブログ</h1>
         </div>
     </section>
+
     <!-- breadcrumb -->
-    <nav class="c-breadcrumb" aria-label="breadcrumb">
-        <div class="l-inner">
-            <ol class="c-breadcrumb__list">
-                <li class="c-breadcrumb__item">
-                    <a href="index.html">ホーム</a>
-                </li>
-                <li class="c-breadcrumb__item"><span>ブログ</span></li>
-            </ol>
-        </div>
-    </nav>
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
+
     <!-- blog -->
     <section class="p-blog-list" id="blog">
         <div class="l-inner">

@@ -799,49 +799,47 @@ a, button {
 .c-breadcrumb {
   background-color: #e8e8e8;
 }
-
 .c-breadcrumb__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-column-gap: 2rem;
      -moz-column-gap: 2rem;
           column-gap: 2rem;
 }
-
-.c-breadcrumb__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  white-space: nowrap;
-  font-size: 1.6rem;
-  line-height: 2.0625;
+@media (max-width: 767px) {
+  .c-breadcrumb__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 1.9rem;
+       -moz-column-gap: 1.9rem;
+            column-gap: 1.9rem;
+  }
 }
-.c-breadcrumb__item:not(:last-child)::after {
-  content: ">";
-  margin-left: 1.8rem;
-  font-size: 1.6rem;
-  line-height: 2.0625;
-}
-.c-breadcrumb__item a,
-.c-breadcrumb__item span {
+.c-breadcrumb__list a,
+.c-breadcrumb__list span {
   display: block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 0.7rem;
+  font-size: 1.6rem;
+  line-height: 2.0625;
 }
-.c-breadcrumb__item a {
+.c-breadcrumb__list a {
   position: relative;
   color: inherit;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
 }
-.c-breadcrumb__item a::after {
+@media (max-width: 767px) {
+  .c-breadcrumb__list a {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.c-breadcrumb__list a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -858,48 +856,19 @@ a, button {
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
-.c-breadcrumb__item a:hover {
+@media (max-width: 767px) {
+  .c-breadcrumb__list a::after {
+    bottom: 0;
+  }
+}
+.c-breadcrumb__list a:hover {
   opacity: 0.7;
 }
-.c-breadcrumb__item a:hover::after {
+.c-breadcrumb__list a:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-.c-breadcrumb__item--title {
-  white-space: normal;
-}
-
-@media (max-width: 767px) {
-  .c-breadcrumb__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding-left: 0;
-    -webkit-column-gap: 1.9rem;
-       -moz-column-gap: 1.9rem;
-            column-gap: 1.9rem;
-  }
-  .c-breadcrumb__item a,
-  .c-breadcrumb__item span {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .c-breadcrumb__item:not(:last-child)::after {
-    margin-left: 2.2rem;
-  }
-  .c-breadcrumb__item a::after {
-    bottom: 0;
-  }
-  .c-breadcrumb__item--title {
-    line-height: 1.25;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
 .c-page-mv__image {
   position: relative;
   isolation: isolate;
@@ -948,8 +917,15 @@ a, button {
      -moz-column-gap: 1rem;
           column-gap: 1rem;
 }
-.c-pagination .current,
-.c-pagination a {
+@media (max-width: 767px) {
+  .c-pagination .wp-pagenavi {
+    -webkit-column-gap: 0.5rem;
+       -moz-column-gap: 0.5rem;
+            column-gap: 0.5rem;
+  }
+}
+.c-pagination .wp-pagenavi .current,
+.c-pagination .wp-pagenavi a {
   width: 5rem;
   height: 5rem;
   font-size: 1.8rem;
@@ -961,19 +937,35 @@ a, button {
   -webkit-transition: background-color 0.4s ease, color 0.4s ease;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
-.c-pagination .current:hover,
-.c-pagination a:hover {
+@media (max-width: 767px) {
+  .c-pagination .wp-pagenavi .current,
+  .c-pagination .wp-pagenavi a {
+    width: 4.4rem;
+    height: 4.4rem;
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+}
+.c-pagination .wp-pagenavi .current:hover,
+.c-pagination .wp-pagenavi a:hover {
   background-color: #000000;
   color: #ffffff;
 }
-.c-pagination .current .extend,
-.c-pagination a .extend {
-  display: inline-block;
-  padding-inline: 1rem;
-  padding-bottom: 1rem;
+.c-pagination .wp-pagenavi .extend {
+  display: grid;
+  place-content: center;
+  padding: 0 1rem;
   font-size: 1.8rem;
+  line-height: 1.6666666667;
   font-weight: bold;
   border: none;
+}
+@media (max-width: 767px) {
+  .c-pagination .wp-pagenavi .extend {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    padding: 0 0.7rem;
+  }
 }
 
 .p-fv {

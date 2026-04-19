@@ -1,17 +1,9 @@
 <?php get_header(); ?>
 <!-- メイン -->
 <main class="main">
+    
     <!-- breadcrumb -->
-    <nav class="c-breadcrumb" aria-label="breadcrumb">
-        <div class="l-inner">
-            <ol class="c-breadcrumb__list">
-                <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                <li class="c-breadcrumb__item"><a href="blog.html">ブログ</a></li>
-                <li class="c-breadcrumb__item"><span>ギター</span></li>
-                <li class="c-breadcrumb__item c-breadcrumb__item--title">アルペジオが劇的に向上する３つの習慣</li>
-            </ol>
-        </div>
-    </nav>
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
 
     <section class="p-blog-detail">
         <div class="l-inner">
