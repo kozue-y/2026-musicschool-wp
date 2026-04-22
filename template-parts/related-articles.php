@@ -5,6 +5,7 @@
                        
                        $taxonomy_map = [
                         'blog' => 'blog_cate',
+                        'result' => 'result_cate'
                        ];
 
                        if (!isset($taxonomy_map[$post_type])) {
@@ -37,17 +38,17 @@
                         if ($the_query->have_posts()) :
                         ?>
 
-                        <section class="p-blog-detail__related">
-                            <h2 class="p-blog-detail__related-title">関連記事</h2>
-                            <ul class="p-blog-detail__related-list">
+                        <section class="c-related-posts">
+                            <h2 class="c-related-posts__title">関連記事</h2>
+                            <ul class="c-related-posts__list">
                                 <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
                                 <?php
                                 $post_terms = get_the_terms(get_the_ID(), $taxonomy);
                                 $term_name = ( ! empty($post_terms) && ! is_wp_error($post_terms) ) ? $post_terms[0]->name : '';
                                 ?>
-                                <li class="p-blog-detail__related-item">
-                                    <a href="<?php the_permalink(); ?>" class="p-blog-detail__related-link">
-                                        <div class="p-blog-detail__related-thumb">
+                                <li class="c-related-posts__item">
+                                    <a href="<?php the_permalink(); ?>" class="c-related-posts__link">
+                                        <div class="c-related-posts__thumb">
                                             <?php if (has_post_thumbnail() ) : ?>
                                             <?php the_post_thumbnail('medium'); ?>
                                             <?php else : ?>
@@ -56,13 +57,13 @@
                                             <?php endif; ?>
 
                                             <span
-                                                class="p-blog-detail__related-category"><?php echo esc_html($term_name); ?></span>
+                                                class="c-related-posts__category"><?php echo esc_html($term_name); ?></span>
                                         </div>
-                                        <div class="p-blog-detail__related-body">
-                                            <p class="p-blog-detail__related-subtitle">
+                                        <div class="c-related-posts__body">
+                                            <p class="c-related-posts__subtitle">
                                                 <?php echo wp_trim_words(get_the_title(), 32, '...'); ?>
                                             </p>
-                                            <time class="p-blog-detail__related-date"
+                                            <time class="c-related-posts__date"
                                                 datetime="<?php echo esc_attr(get_the_date('Y-m-d')); ?>">
                                                 <?php echo esc_html(get_the_date('Y.m.d') ); ?></time>
                                         </div>
