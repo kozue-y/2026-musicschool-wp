@@ -5,7 +5,7 @@
                        
                        $taxonomy_map = [
                         'blog' => 'blog_cate',
-                        'result' => 'result_cate'
+                        'result' => 'genre',
                        ];
 
                        if (!isset($taxonomy_map[$post_type])) {

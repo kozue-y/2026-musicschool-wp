@@ -260,61 +260,37 @@
 }
 // ページネーション
 
-.c-single-pagination {
+.p-blog-detail .c-single-pagination {
     margin-top: 5.5rem;
-    margin-bottom: 9.1rem;
+
+    @media (max-width: 767px) {
+        margin-top: 4.5rem;
+        
+    }
 }
-.c-single-pagination__list {
-    display: flex;
+.p-blog-detail .c-single-pagination__list {
     gap: 7.9rem;
+
+    @media (max-width: 767px) {
+        gap: 2.2rem;       
+    }
 }
-.c-single-pagination__item {
+.p-blog-detail .c-single-pagination__item {
     width: calc((100% - 7.9rem) / 2);
     flex-shrink: 0;
-}
-.c-single-pagination__link {
-    display: block;
 
-    &:hover {
-        opacity: 0.7;
+    @media (max-width: 767px) {
+        flex: 1 1 calc((100% - 2.2rem) / 2);  
     }
 }
-.c-single-pagination__label {
-    display: flex;
-    align-items: center;
-    padding: 0.4rem 2rem 0.3rem;
-    font-size: 1.7rem;
-    line-height: calc(30 / 17);
-    background-color: $color-black;
-    color: $color-white;
-}
-.c-single-pagination__label--prev{
-    justify-content: flex-start;
-}
-.c-single-pagination__label--next {
-    justify-content: flex-end;
-}
-.c-single-pagination__body {
-    display: flex;
-    gap: 1.6rem;
-    margin-top: 1.5rem;
-}
-.c-single-pagination__thumb{
-    width: 9.8rem;
-    flex-shrink: 0;
 
-    img {
-        aspect-ratio: 98 / 68;
-        object-fit: cover;
+// 関連記事
+.p-blog-detail .c-related-posts {
+    margin-top: 9.1rem;
+    
+    @media (max-width: 767px) {
+        margin-top: 6.4rem;
     }
-}
-.c-single-pagination__title {
-    overflow: hidden;
-    display: block;
-    max-height: calc(1.6rem * 1.5625 * 3);
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
-    font-weight: bold;
 }
 
 .p-blog-detail .c-related-posts__thumb {
@@ -419,21 +395,7 @@
 
     .p-blog-detail__sns {
         margin-top: 2.3rem;
-    }
-
-    .p-blog-detail__post-nav {
-        margin-top: 4.5rem;
-        margin-bottom: 6.4rem;
-    }
-    .p-blog-detail__post-nav-list {
-        justify-content: flex-start;
-        gap: 2.2rem;
-    }
-    .p-blog-detail__post-nav-item {
-        flex: 1 1 calc((100% - 2.2rem) / 2);
-    }
-    
-    
+    }    
 }
 
     
