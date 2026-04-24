@@ -89,3 +89,53 @@ function my_page_conditions($query)
   }
 }
 add_action('pre_get_posts', 'my_page_conditions');
+
+// --------------------------------------------------
+// snow monkey エラーメッセージカスタム
+// --------------------------------------------------
+function my_smf_error_message( $error_message ) {
+    return '必須項目に入力してください。';
+}
+add_filter( 'snow_monkey_forms/validator/error_message', 'my_smf_error_message' );
+
+// --------------------------------------------------
+// Snow Monkey Forms 送信後リダイレクト
+// contact ページのフォーム送信完了後に /contact-send/ へ遷移
+// --------------------------------------------------
+add_action(
+    'wp_enqueue_scripts',
+    function () {
+        if ( ! is_page( 'contact' ) ) {
+            return;
+        }
+
+        $redirect_url = home_url( '/contact-send/' );
+
+        $script = <<<JS
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('snow-monkey-form-149');
+  if (!form) return;
+
+  form.addEventListener('submit', function () {
+    var observer = new MutationObserver(function () {
+      if (form.getAttribute('data-screen') === 'complete') {
+        window.location.href = '{$redirect_url}';
+      }
+    });
+
+    observer.observe(form, {
+      attributes: true,
+      attributeFilter: ['data-screen']
+    });
+  });
+});
+JS;
+
+        wp_add_inline_script(
+            'snow-monkey-forms',
+            $script,
+            'after'
+        );
+    },
+    11
+);

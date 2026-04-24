@@ -178,7 +178,22 @@
         color: $main-color;
     }
 }
-
+.smf-action .smf-button-control+.smf-button-control {
+    margin-left: 0;
+}
+.smf-error-messages {
+    font-size: 1.6rem;
+    color: $main-color;
+}
+.smf-placeholder {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    
+     @media (max-width: 767px) {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}
 
 
 

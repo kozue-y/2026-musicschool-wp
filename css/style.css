@@ -3623,12 +3623,17 @@ a, button {
 @media (max-width: 767px) {
   .smf-form .smf-checkbox-control {
     font-size: 1.6rem;
-    line-height: 2.0625;
+    line-height: 1.875;
   }
 }
 
 .smf-checkbox-control__label {
   padding-left: 2rem;
+}
+@media (max-width: 767px) {
+  .smf-checkbox-control__label {
+    padding-left: 1rem;
+  }
 }
 
 .smf-form .smf-checkbox-control__control {
@@ -3687,6 +3692,26 @@ a, button {
   color: #CB0000;
 }
 
+.smf-action .smf-button-control + .smf-button-control {
+  margin-left: 0;
+}
+
+.smf-error-messages {
+  font-size: 1.6rem;
+  color: #CB0000;
+}
+
+.smf-placeholder {
+  font-size: 1.8rem;
+  line-height: 1.6666666667;
+}
+@media (max-width: 767px) {
+  .smf-placeholder {
+    font-size: 1.6rem;
+    line-height: 1.875;
+  }
+}
+
 .p-contact-complete {
   padding-top: 6.7rem;
   padding-bottom: 9rem;
@@ -3698,8 +3723,22 @@ a, button {
   text-align: center;
 }
 
+.p-contact-form__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .p-contact-form__btn-send {
   margin-top: 4rem;
+}
+
+.c-btn {
+  font-size: 2.5rem;
+  line-height: 1.32;
 }
 
 @media (max-width: 767px) {
