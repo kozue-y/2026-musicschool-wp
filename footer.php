@@ -2,14 +2,23 @@
 <footer id="footer" class="c-footer">
     <div class="l-inner">
         <nav aria-label="フッターナビゲーション">
-            <ul class="c-footer__nav">
+            <?php
+            wp_nav_menu(
+                array(
+                    'menu_class' => 'c-footer__nav',
+                    'theme_location' => 'footer',
+                    'container' => false,
+                    )
+                );
+                ?>
+            <!-- <ul class="c-footer__nav">
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="plan.html">料金</a></li>
                 <li><a href="blog.html">ブログ</a></li>
                 <li><a href="result_list.html">卒業実績</a></li>
-            </ul>
+            </ul> -->
         </nav>
-        <a href="index.html" class="c-footer__logo">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="c-footer__logo">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo_white.svg" alt="サイトロゴ">
         </a>
         <div class="c-footer__copyright">

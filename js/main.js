@@ -45,7 +45,8 @@ $(function() {
 
 
 $(function () {
-
+  $('body').show();
+  
   // ① 使う要素・変数をまとめる
   const $pageTop    = $("#js-page-top");
   const $contactBtn = $("#js-contact-btn");

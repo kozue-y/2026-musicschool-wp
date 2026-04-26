@@ -519,7 +519,7 @@ a, button {
   }
 }
 
-.c-header-btn {
+.c-global-nav__list .c-header-btn > a {
   background: #CB0000;
   color: #ffffff;
   display: -webkit-box;
@@ -540,7 +540,7 @@ a, button {
   -webkit-transition: background-color 0.4s ease, color 0.4s ease;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
-.c-header-btn:hover {
+.c-global-nav__list .c-header-btn > a:hover {
   background-color: #ffffff;
   color: #CB0000;
 }
@@ -1618,6 +1618,7 @@ a, button {
   color: #ffffff;
   text-align: center;
   margin-top: 1.7rem;
+  white-space: nowrap;
 }
 
 .p-voices__job {

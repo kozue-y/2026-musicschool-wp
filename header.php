@@ -17,7 +17,9 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?> style="display: none;">
+    <?php wp_body_open(); ?>
+    <!-- ページごとのクラス自動付与・WordPress推奨フック -->
     <div class="container">
         <!-- header -->
         <header class="l-header" id="header">
@@ -45,14 +47,15 @@
                 <!-- PC用ナビ -->
                 <div class="c-global-nav u-pc-only">
                     <nav aria-label="ヘッダーナビゲーション">
-                        <ul class="c-global-nav__list">
-                            <li><a href="plan.html">料金</a></li>
-                            <li><a href="blog.html">ブログ</a></li>
-                            <li><a href="result_list.html">卒業実績</a></li>
-                        </ul>
-                        <div class="c-global-nav__contact-wrap">
-                            <a href="contact_form.html" class="c-header-btn c-global-nav__contact">お問い合わせ</a>
-                        </div>
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'menu_class' => 'c-global-nav__list',
+                                'theme_location' => 'primary',
+                                'container' => false,
+                                )
+                            );
+                        ?>
                     </nav>
                 </div>
             </div>
@@ -69,11 +72,15 @@
             <!-- ハンバーガーナビゲーションSP用 -->
             <div class="c-drawer-menu u-sp-only" id="js-drawer">
                 <nav aria-label="ヘッダーナビゲーション">
-                    <ul class="c-drawer-menu__list">
-                        <li><a href="plan.html">料金</a></li>
-                        <li><a href="blog.html">ブログ</a></li>
-                        <li><a href="result_list.html">卒業実績</a></li>
-                    </ul>
+                    <?php
+                wp_nav_menu(
+                    array(
+                        'menu_class' => 'c-drawer-menu__list',
+                        'theme_location' => 'primary',
+                        'container' => false,
+                        )
+                    );
+                ?>
                 </nav>
             </div>
         </header>

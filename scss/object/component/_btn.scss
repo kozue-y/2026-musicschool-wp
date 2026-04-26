@@ -1,6 +1,6 @@
 @use"../../foundation/variable" as*;
 
-.c-header-btn {
+.c-global-nav__list .c-header-btn > a {
     background: $main-color;
     color: $color-white;
     display: flex;
