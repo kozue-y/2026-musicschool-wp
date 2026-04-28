@@ -926,6 +926,11 @@ a, button {
             column-gap: 0.5rem;
   }
 }
+.c-pagination .wp-pagenavi a,
+.c-pagination .wp-pagenavi span {
+  padding: 0;
+  margin: 0;
+}
 .c-pagination .wp-pagenavi .current,
 .c-pagination .wp-pagenavi a {
   width: 5rem;
