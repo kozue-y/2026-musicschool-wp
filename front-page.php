@@ -1,8 +1,8 @@
-<?php get_header (); ?>
+<?php get_header(); ?>
 
 <main class="main">
     <!-- FV -->
-    <section id="FV" class="p-fv">
+    <section id="fv" class="p-fv">
         <div class="p-fv__image">
             <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/images/fv_sp.jpg"
@@ -145,10 +145,11 @@
                                 </div>
 
                                 <p class="p-voices__name">
-                                    <span class="p-voices__job"><?php the_field('job'); ?></span>
-                                    <span class="p-voices__person"><?php the_field('name'); ?>さん</span>
+                                    <span class="p-voices__job"><?php echo esc_html( get_field('job') ); ?></span>
+                                    <span class="p-voices__person"><?php echo esc_html( get_field('name') ); ?>さん</span>
                                 </p>
-                                <p class="p-voices__text"><?php echo wp_trim_words(get_the_content(), 45, '...'); ?></p>
+                                <p class="p-voices__text">
+                                    <?php echo esc_html( wp_trim_words(get_the_content(), 45, '...') ); ?></p>
                             </a>
                         </div>
                         <?php
@@ -288,10 +289,15 @@
                 $args = array(
                     'posts_per_page' => 3,
                     'post_type' => 'blog',
-                    'taxonomy' => 'blog_recommend',
-                    'term' => 'recommend',
                     'orderby' => 'date',
                     'order' => 'DESC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'blog_recommend',
+                            'field' => 'slug',
+                            'terms' => 'recommend',
+                        ),
+                    ),
                 );
                 $the_query = new WP_Query( $args );
                 if ( $the_query->have_posts() ) :
@@ -313,9 +319,11 @@
                         </span>
                     </div>
                     <div class="p-blog__content">
-                        <h3 class="p-blog__subtitle"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?></h3>
-                        <time datetime="<?php the_time('Y-m-d'); ?>"
-                            class="p-blog__date"><?php the_time('Y.m.d'); ?></time>
+                        <h3 class="p-blog__subtitle">
+                            <?php echo esc_html( wp_trim_words(get_the_title(), 35, '...') ); ?>
+                        </h3>
+                        <time datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"
+                            class="p-blog__date"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></time>
                     </div>
                 </a>
                 <?php endwhile;

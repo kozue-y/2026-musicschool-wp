@@ -13,16 +13,7 @@
 
         <div class="p-widget p-widget--search">
             <p class="p-widget__title">ブログ内を検索</p>
-            <form class="p-widget__search-form" action="search.html">
-                <label class="p-widget__search-label">
-                    <input type="search" name="s" class="p-widget__search-input">
-                </label>
-                <button type="submit" class="p-widget__search-button" aria-label="検索">
-                    <span class="p-widget__search-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-search.svg" alt="検索">
-                    </span>
-                </button>
-            </form>
+            <?php get_search_form(); ?>
         </div>
 
         <div class="p-widget p-widget--recommend">
@@ -31,11 +22,16 @@
                 <?php
                 $args = array(
                     'posts_per_page' => 3,
-                    'post_type' => 'blog',
-                    'taxonomy' => 'blog_recommend',
-                    'term' => 'recommend',
-                    'orderby' => 'date',
-                    'order' => 'DESC'
+                    'post_type'      => 'blog',
+                    'orderby'        => 'date',
+                    'order'          => 'DESC',
+                    'tax_query'      => array(
+                        array(
+                            'taxonomy' => 'blog_recommend',
+                            'field'    => 'slug',
+                            'terms'    => 'recommend',
+                        ),
+                    ),
                 );
                 $the_query = new WP_Query($args);
                 if ($the_query->have_posts()):

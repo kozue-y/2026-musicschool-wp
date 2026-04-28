@@ -203,3 +203,14 @@ $(function() {
 
     updateThumb();
 });
+
+// search戻るボタン
+$(function() {
+  $('.js-history-back').on('click', function() {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = '/blog/';
+    }
+  });
+});

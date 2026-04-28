@@ -20,6 +20,13 @@ function custom_theme_setup() {
     );
     add_theme_support('wp-block-styles');
     add_theme_support('responsive-embeds');
+
+    register_nav_menus(
+      array(
+        'primary' => 'Primary Menu',
+        'footer' => 'Footer Menu',
+      )
+    );
 }
 add_action('after_setup_theme', 'custom_theme_setup');
 
@@ -28,7 +35,7 @@ add_action('after_setup_theme', 'custom_theme_setup');
 // --------------------------------------------------
 
 function add_files() {
-$now = date('YmdHis');
+  $now = date('YmdHis');
 
 //テーマCSS
 wp_enqueue_style(
@@ -83,8 +90,12 @@ function my_page_conditions($query)
   if (!is_admin() && $query->is_main_query()) {
    // カスタム投稿のスラッグを記述
    if (is_post_type_archive(['blog', 'result'])) {
-    // 表示件数を指定
-    $query->set('posts_per_page', 10);
+      // 表示件数を指定
+      $query->set('posts_per_page', 10);
+    }
+    // 検索結果ページの場合
+    if ($query->is_search()) {
+      $query->set('post_type', 'blog');
     }
   }
 }
@@ -139,14 +150,3 @@ JS;
     },
     11
 );
-// --------------------------------------------------
-// 管理画面「外観＞メニュー」を表示
-// --------------------------------------------------
-function register_my_menus()
- {
-    register_nav_menus(array(
-        'primary' => 'Primary Menu',
-        'footer' => 'Footer Menu',
-        ));
-      }
-      add_action('after_setup_theme', 'register_my_menus');

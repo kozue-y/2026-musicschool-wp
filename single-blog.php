@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!-- メイン -->
 <main class="main">
-    
+
     <!-- breadcrumb -->
     <?php get_template_part('template-parts/breadcrumbs'); ?>
 
@@ -11,7 +11,7 @@
                 <div class="p-blog-detail__main">
                     <article class="p-blog-detail__article">
                         <div class="p-blog-detail__header">
-                            <h1 class="p-blog-detail__title"><?php the_title(); ?></h1>
+                            <h1 class="p-blog-detail__title"><?php echo esc_html( get_the_title() ); ?></h1>
                             <time class="p-blog-detail__date"
                                 datetime="<?php echo esc_attr(get_the_date('Y-m-d')); ?>"><?php echo esc_html(get_the_date('Y.m.d')); ?></time>
                             <div class="p-blog-detail__img-wrapper">
@@ -63,7 +63,7 @@
                                         </a>
                                     </li>
                                     <li class="p-blog-detail__sns-item p-blog-detail__sns-item--hatena">
-                                        <a href="<?php echo esc_url('http://b.hatena.ne.jp/add?mode=confirm&url=' . $url . '&title=' . $title); ?>"
+                                        <a href="<?php echo esc_url('https://b.hatena.ne.jp/add?mode=confirm&url=' . $url . '&title=' . $title); ?>"
                                             target="_blank" rel="noopener noreferrer" aria-label="hatenaでシェア">
                                             <span class="p-blog-detail__sns-icon">
                                                 <picture>

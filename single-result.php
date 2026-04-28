@@ -9,9 +9,9 @@
             <?php while (have_posts() ) : the_post(); ?>
 
             <div class="p-result-detail__header">
-                <h1 class="p-result-detail__title"><?php the_title(); ?></h1>
+                <h1 class="p-result-detail__title"><?php echo esc_html( get_the_title() ); ?></h1>
                 <time class="p-result-detail__date"
-                    datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                    datetime="<?php echo esc_attr( get_the_date('Y-m-d') ); ?>"><?php echo esc_html (get_the_date('Y.m.d') ); ?></time>
                 <div class="p-result-detail__img-wrapper">
                     <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail('large'); ?>
@@ -31,11 +31,11 @@
                     <tbody>
                         <tr>
                             <th scope="row">名前</th>
-                            <td><?php the_field('name'); ?></td>
+                            <td><?php echo esc_html( get_field('name') ); ?></td>
                         </tr>
                         <tr>
                             <th scope="row">職業</th>
-                            <td><?php the_field('job'); ?></td>
+                            <td><?php echo esc_html( get_field('job') ); ?></td>
                         </tr>
                         <tr>
                             <th scope="row">ジャンル</th>
@@ -47,11 +47,11 @@
                         </tr>
                         <tr>
                             <th scope="row">実績</th>
-                            <td><?php the_field('achievement'); ?></td>
+                            <td><?php echo esc_html( get_field('achievement') ); ?></td>
                         </tr>
                         <tr>
                             <th scope="row">SNS</th>
-                            <td><?php the_field('sns'); ?></td>
+                            <td><?php echo esc_html( get_field('sns') ); ?></td>
                         </tr>
                     </tbody>
                 </table>

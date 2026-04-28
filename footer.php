@@ -11,12 +11,6 @@
                     )
                 );
                 ?>
-            <!-- <ul class="c-footer__nav">
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="plan.html">料金</a></li>
-                <li><a href="blog.html">ブログ</a></li>
-                <li><a href="result_list.html">卒業実績</a></li>
-            </ul> -->
         </nav>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="c-footer__logo">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo_white.svg" alt="サイトロゴ">

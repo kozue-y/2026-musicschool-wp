@@ -21,7 +21,7 @@
             <h2 class="p-blog-list__title">ブログ一覧</h2>
 
             <ul class="p-blog-list__list">
-                <!-- 記事1 -->
+                <!-- 記事 -->
                 <?php
                 if (have_posts()) :
                   while (have_posts()) :
@@ -46,12 +46,12 @@
                         </div>
                         <div class="p-blog-list__content">
                             <h3 class="p-blog-list__subtitle">
-                                <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
+                                <?php echo esc_html( wp_trim_words( get_the_title(), 26, '...') ); ?>
                             </h3>
-                            <time datetime="<?php the_time('Y-m-d'); ?>"
-                                class="p-blog-list__date"><?php the_time('Y.m.d'); ?></time>
+                            <time datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"
+                                class="p-blog-list__date"><?php echo esc_html(get_the_date( 'Y.m.d' ) ); ?></time>
                             <p class="p-blog-list__text">
-                                <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
+                                <?php echo esc_html( wp_trim_words(get_the_content(), 120, '...') ); ?>
                             </p>
                         </div>
                     </a>

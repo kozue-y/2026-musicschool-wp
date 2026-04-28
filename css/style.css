@@ -354,9 +354,11 @@ a, button {
   font-size: 1.7rem;
   line-height: 1.9411764706;
   font-weight: bold;
+}
+.c-global-nav__list li:not(.c-header-btn) > a {
   position: relative;
 }
-.c-global-nav__list li a::after {
+.c-global-nav__list li:not(.c-header-btn) > a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -374,7 +376,7 @@ a, button {
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 @media (min-width: 769px) {
-  .c-global-nav__list li a:hover::after {
+  .c-global-nav__list li:not(.c-header-btn) > a:hover::after {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
@@ -2679,6 +2681,11 @@ a, button {
   font-size: 1.8rem;
   line-height: 1.6666666667;
 }
+@media (max-width: 767px) {
+  .p-search-result__count {
+    margin-left: auto;
+  }
+}
 
 .p-search-list__list {
   margin-top: 4.1rem;
@@ -2687,26 +2694,70 @@ a, button {
 .p-search-pagination {
   margin-top: 7rem;
 }
+@media (max-width: 767px) {
+  .p-search-pagination {
+    margin-top: 5.9rem;
+  }
+}
+
+.is-search-empty .p-search-list {
+  padding-bottom: 9rem;
+}
+@media (max-width: 767px) {
+  .is-search-empty .p-search-list {
+    padding-bottom: 5rem;
+  }
+}
+
+.p-search-result.p-search-result--empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 3rem;
+}
+
+.p-search-result__back {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.p-search-result__message {
+  font-size: 1.8rem;
+  line-height: 1.6666666667;
+}
+@media (max-width: 767px) {
+  .p-search-result__message {
+    font-size: 1.6rem;
+    line-height: 1.875;
+  }
+}
+
+.is-search-empty #js-page-top,
+.is-search-empty #js-contact-btn {
+  display: none;
+}
 
 @media (max-width: 767px) {
   .p-search-list {
     padding-top: 4rem;
   }
-  .p-search-result {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .p-search-result__count {
-    margin-left: auto;
-  }
-  .p-search-pagination {
-    margin-top: 5.9rem;
-  }
 }
+
 .p-blog-detail {
   padding-top: 7rem;
   padding-bottom: 18.7rem;

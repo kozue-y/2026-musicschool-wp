@@ -7,7 +7,7 @@
             <picture>
                 <source media="(min-width: 768px)"
                     srcset="<?php echo get_template_directory_uri(); ?>/images/result.jpg">
-                < <img src="<?php echo get_template_directory_uri(); ?>/images/result_sp.jpg" alt="卒業実績">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/result_sp.jpg" alt="卒業実績">
             </picture>
             <h1 class="c-page-mv__title">卒業実績</h1>
         </div>
@@ -21,7 +21,7 @@
             <h2 class="p-result-list__title">卒業実績一覧</h2>
 
             <ul class="p-result-list__list">
-                <!-- 記事1 -->
+                <!-- 記事 -->
                 <?php 
                 if (have_posts()) :
                 while (have_posts()) :
@@ -44,10 +44,10 @@
                         </div>
                         <div class="p-result-list__content">
                             <h3 class="p-result-list__text">
-                                <?php echo wp_trim_words(get_the_title(), 32, '...'); ?>
+                                <?php echo esc_html( wp_trim_words (get_the_title(), 32, '...') ); ?>
                             </h3>
-                            <time datetime="<?php the_time('Y-m-d'); ?>"
-                                class="p-result-list__date"><?php the_time('Y.m.d'); ?></time>
+                            <time datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"
+                                class="p-result-list__date"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></time>
                         </div>
                     </a>
                 </li>

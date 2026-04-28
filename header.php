@@ -61,7 +61,7 @@
             </div>
 
             <!-- ハンバーガーボタンSP用 -->
-            <button id="hamburger-block" class="c-hamburger u-sp-only">
+            <button type="button" id="hamburger-block" class="c-hamburger u-sp-only">
                 <span class="c-hamburger__inner">
                     <span class="c-hamburger__line"></span>
                     <span class="c-hamburger__line"></span>
@@ -75,9 +75,9 @@
                     <?php
                 wp_nav_menu(
                     array(
-                        'menu_class' => 'c-drawer-menu__list',
+                        'menu_class'     => 'c-drawer-menu__list',
                         'theme_location' => 'primary',
-                        'container' => false,
+                        'container'      => false,
                         )
                     );
                 ?>
