@@ -51,7 +51,7 @@
                             <time datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"
                                 class="p-blog-list__date"><?php echo esc_html(get_the_date( 'Y.m.d' ) ); ?></time>
                             <p class="p-blog-list__text">
-                                <?php echo esc_html( wp_trim_words(get_the_content(), 120, '...') ); ?>
+                                <?php echo esc_html( wp_trim_words(get_the_content(), 95, '...') ); ?>
                             </p>
                         </div>
                     </a>

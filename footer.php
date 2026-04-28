@@ -19,16 +19,16 @@
             <small>Copyright &copy; 0000 KITAMURA music school Inc. All Rights</small>
         </div>
         <ul class="c-footer__sns">
-            <li><a href="#" target="_blank" rel="noopener noreferrer"><img
+            <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img
                         src="<?php echo get_template_directory_uri(); ?>/images/icon_twitter.svg"
                         alt="twitterへのリンク（別タブで開きます）"></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer"><img
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img
                         src="<?php echo get_template_directory_uri(); ?>/images/icon_facebook.svg"
                         alt="facebookへのリンク（別タブで開きます）"></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer"><img
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img
                         src="<?php echo get_template_directory_uri(); ?>/images/icon_youtube.svg"
                         alt="youtubeへのリンク（別タブで開きます）"></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer"><img
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img
                         src="<?php echo get_template_directory_uri(); ?>/images/icon_instagram.svg"
                         alt="instagramへのリンク（別タブで開きます）"></a></li>
         </ul>

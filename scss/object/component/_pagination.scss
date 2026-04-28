@@ -12,6 +12,13 @@
     @media (max-width: 767px) {
     column-gap: 0.5rem;
     }
+
+    a,
+    span {
+      padding: 0;
+      margin: 0;
+    }
+    
     .current,
     a {
         width: 5rem;
