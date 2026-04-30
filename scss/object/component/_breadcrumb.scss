@@ -18,6 +18,11 @@
         font-size: 1.6rem;
         line-height: calc(33 / 16);    
     }
+    .current-item {
+        @media (max-width: 767px) {
+            line-height: calc(20 / 16);
+        }
+    }
     a {
         
         position: relative;
@@ -59,10 +64,3 @@
     }
     }
 }
-
-// @media (max-width: 767px) {
-//     .c-breadcrumb__item--title {
-//         line-height: calc(20 /16);
-//         align-items: flex-start;
-//     }
-// }

@@ -13,6 +13,15 @@
     order: -1;
     width: 100%;
 }
+.p-result-detail__img-wrapper img {
+    aspect-ratio: 880 / 400;
+    object-fit: cover;
+
+    @media (max-width: 767px) {
+        aspect-ratio: 335 / 236;
+    }
+}
+
 .p-result-detail__category {
     position: absolute;
     top: 0;
