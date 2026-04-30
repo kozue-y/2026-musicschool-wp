@@ -3,11 +3,11 @@
     max-width: 940px;
     padding-inline: 3rem;
     margin-inline: auto;
-}
-@media (max-width: 767px) {
-    .l-inner {
+
+    @media (max-width: 767px) {
         padding-inline: 2rem;
-    }    
+        
+    }
 }
 
   
