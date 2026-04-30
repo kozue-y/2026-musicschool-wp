@@ -8,9 +8,14 @@
     line-height: calc(30 / 18);
     text-align: center;
 }
+.p-contact-form__btn {
+    display: flex;
+    justify-content: center;
+}
 .p-contact-form__btn-send {
     margin-top: 4rem;
 }
+
 
 @media (max-width: 767px) {
     .p-contact-complete {

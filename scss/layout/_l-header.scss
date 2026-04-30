@@ -8,6 +8,10 @@
     top: 0;
     left: 0;
     z-index: 1100;
+
+    @media (max-width: 767px) {
+        height: 5rem;        
+    }
 }
 .l-header-inner {
     width: 88rem;
@@ -16,9 +20,4 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-@media (max-width: 767px) {
-    .l-header {
-        height: 5rem;
-    }
 }

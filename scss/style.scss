@@ -16,6 +16,8 @@
 @use"./object/component/breadcrumb";
 @use"./object/component/mv";
 @use"./object/component/pagination";
+@use"./object/component/related-posts";
+@use"./object/component/single-pagination";
 @use"./object/project/top/fv";
 @use"./object/project/top/concept";
 @use"./object/project/top/future";
@@ -35,7 +37,4 @@
 @use"./object/project/404page/404" as *;
 @use"./object/project/result-list/result";
 @use"./object/project/result-list/result-details";
-
-
-
 

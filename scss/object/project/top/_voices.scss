@@ -26,6 +26,12 @@
     max-width: calc(100% - 82px);
     margin-inline: auto;
 }
+.p-voices__swiper .swiper-wrapper {
+    height: auto;
+}
+.p-voices__swiper .swiper-slide {
+    height: auto;
+}
 .p-voices__card {
     display: block;
     width: 100%;
@@ -54,6 +60,7 @@
     color: $color-white;
     text-align: center;
     margin-top: 1.7rem;
+    white-space: nowrap;
 }
 .p-voices__job {
     margin-right: 1.2rem;
