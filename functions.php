@@ -24,6 +24,7 @@ function custom_theme_setup() {
     register_nav_menus(
       array(
         'primary' => 'Primary Menu',
+        'sp_header' => 'SP Header Menu',
         'footer' => 'Footer Menu',
       )
     );

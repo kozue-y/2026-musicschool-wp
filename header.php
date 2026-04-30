@@ -73,7 +73,7 @@
                 wp_nav_menu(
                     array(
                         'menu_class'     => 'c-drawer-menu__list',
-                        'theme_location' => 'primary',
+                        'theme_location' => 'sp_header',
                         'container'      => false,
                         )
                     );
