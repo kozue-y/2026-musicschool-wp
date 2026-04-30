@@ -18,7 +18,7 @@
       padding: 0;
       margin: 0;
     }
-    
+
     .current,
     a {
         width: 5rem;
@@ -41,6 +41,10 @@
             background-color: $color-black;
             color: $color-white;
         }
+    }
+    .current {
+        background-color: $color-black;
+        color: $color-white;
     }
     
     .extend {
