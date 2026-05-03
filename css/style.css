@@ -808,6 +808,9 @@ a, button {
 }
 .c-breadcrumb {
   background-color: #e8e8e8;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .c-breadcrumb__list {
   display: -webkit-box;
@@ -819,11 +822,12 @@ a, button {
   -webkit-column-gap: 2rem;
      -moz-column-gap: 2rem;
           column-gap: 2rem;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .c-breadcrumb__list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-column-gap: 1.9rem;
        -moz-column-gap: 1.9rem;
             column-gap: 1.9rem;
@@ -834,6 +838,7 @@ a, button {
   display: block;
   font-size: 1.6rem;
   line-height: 2.0625;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .c-breadcrumb__list .current-item {
@@ -1643,6 +1648,8 @@ a, button {
   text-align: center;
   margin-top: 1.7rem;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .p-voices__job {
@@ -1656,6 +1663,10 @@ a, button {
   color: #ffffff;
   text-align: left;
   letter-spacing: -0.01em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .p-voices__prev,
@@ -2104,6 +2115,10 @@ a, button {
   font-size: 2rem;
   line-height: 1.25;
   font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .p-blog__date {
@@ -3838,7 +3853,6 @@ a, button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 2rem;
   }
 }
 
