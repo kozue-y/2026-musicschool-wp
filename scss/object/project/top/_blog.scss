@@ -54,6 +54,10 @@
     font-size: 2rem;
     line-height: calc(25 / 20);
     font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 .p-blog__date {
     display: block;
