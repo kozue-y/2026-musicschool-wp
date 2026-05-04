@@ -365,7 +365,7 @@
     flex-shrink: 0;
 
     @media (max-width: 767px) {
-        flex: 1 1 calc((100% - 2.2rem) / 2);  
+        width: calc((100% - 2.2rem) / 2); 
     }
 }
 

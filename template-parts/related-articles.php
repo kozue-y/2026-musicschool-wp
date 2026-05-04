@@ -61,7 +61,7 @@
                                         </div>
                                         <div class="c-related-posts__body">
                                             <p class="c-related-posts__subtitle">
-                                                <?php echo wp_trim_words(get_the_title(), 15, '...'); ?>
+                                                <?php echo wp_trim_words(get_the_title(), 55, '...'); ?>
                                             </p>
                                             <time class="c-related-posts__date"
                                                 datetime="<?php echo esc_attr(get_the_date('Y-m-d')); ?>">
