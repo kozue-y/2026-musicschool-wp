@@ -4060,6 +4060,8 @@ a, button {
   aspect-ratio: 880/400;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 @media (max-width: 767px) {
   .p-result-detail__img-wrapper img {

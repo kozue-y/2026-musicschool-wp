@@ -16,6 +16,7 @@
 .p-result-detail__img-wrapper img {
     aspect-ratio: 880 / 400;
     object-fit: cover;
+    object-position: center top;
 
     @media (max-width: 767px) {
         aspect-ratio: 335 / 236;
